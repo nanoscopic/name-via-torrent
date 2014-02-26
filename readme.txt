@@ -11,7 +11,10 @@ Known bugs:
 - Some torrent files spit out errors ( the errors come from the underlying Net::BitTorrent:Torrent dependency )
 
 Todo:
-- Update the script to use CRC values embedded in filenames using square brackets if they exist and the torrent itself does not have CRC values.
+- Use CRC values embedded in filenames using square brackets if they exist and the torrent itself does not have CRC values.
+- Create and use an embedded perl torrent parser so that there are no external dependencies
+- Use MD5 file hashes if they are present in the torrent
+- If torrent contains no CRC, filenames contain no CRC, and no MD5 hashes are present, default to using filesizes and SHA1 fragment hashes to identify files
 
 Version History:
 1.0: Initial release to github
